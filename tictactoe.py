@@ -57,9 +57,7 @@ for rounds in range(1, 10):
     if turn == 'O':
         print('Bot\'s turn')
         time.sleep(1.5)
-        bot = int(random.randint(0,8))
-        while bot not in options_list:
-            bot = random.randint(0,8)
+        bot = int(random.choice(options_list))
         board[str(bot)] = turn
         options_list.remove(bot)   
     else:
