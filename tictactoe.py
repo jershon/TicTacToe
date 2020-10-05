@@ -63,13 +63,11 @@ for rounds in range(1, 10):
     else:
         print('Player\'s turn')
         time.sleep(1.5)
-        for options in options_list:
-            print(options)
+        print("Available choices are: " + ' '.join(str(i) for i in options_list))
         player = input('Enter your choice based on the options above : ')
         while int(player) not in options_list:
             print('Your choice is not recognized! Please re-enter your choice!')
-            for options in options_list:
-                print(options)
+            print("Available choices are: " + ' '.join(str(i) for i in options_list))
             player = input('Enter your choice based on the options above : ')   
         board[player] = turn
         options_list.remove(int(player))
